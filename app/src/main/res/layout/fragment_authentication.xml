@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_background"
+    tools:context=".mine.supplement.fragment.AuthenticationFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorf4f7ff"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/id_card_front_photo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_id_card"
+                android:layout_width="175dp"
+                android:layout_height="130dp"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/id_card_font" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/name" />
+
+                <EditText
+                    android:id="@+id/et_name"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="@string/editable"
+                    android:maxLength="10"
+                    android:singleLine="true" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/identity_number" />
+
+                <EditText
+                    android:id="@+id/tv_identity_number"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:singleLine="true"
+                    android:maxLength="19"
+                    android:hint="@string/editable" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_20" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorf4f7ff"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/id_card_reverse_photo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_reverse_photo"
+                android:layout_width="175dp"
+                android:layout_height="130dp"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/id_card_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/valid_until" />
+
+                <TextView
+                    android:id="@+id/tv_valid_until"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/not_editable" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_authentication_next"
+            style="@style/style_login_btn"
+            android:text="@string/next" />
+    </LinearLayout>
+</ScrollView>

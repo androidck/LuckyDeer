@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_map_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="信息标题" />
+
+        <TextView
+            android:id="@+id/tv_map_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="13sp"
+            tools:text="信息展示" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_start_navigation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:background="?android:actionBarItemBackground"
+        android:padding="@dimen/dp_10"
+        android:src="@drawable/navigation" />
+</LinearLayout>

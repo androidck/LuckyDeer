@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:padding="@dimen/dp_10"
+    tools:context=".weight.adapter.SelectRepaymentDateAdapter">
+
+
+    <TextView
+        android:id="@+id/item_month"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorBlack"
+        tools:text="4 月" />
+
+
+    <TextView
+        android:id="@+id/item_select_all_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/rectangle_blue_full_30"
+        android:gravity="center"
+        android:paddingLeft="@dimen/dp_20"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingRight="@dimen/dp_20"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="全选"
+        android:textColor="@color/white"
+        tools:ignore="RtlHardcoded" />
+
+
+</RelativeLayout>

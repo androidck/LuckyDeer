@@ -1,0 +1,1 @@
+include ':app', ':requestcore', ':model', ':loadstatusview', ':sharingfunction',':cloudStorage', ':mapfeatures',':textRecognition',':umengfunction',':ocr_ui'

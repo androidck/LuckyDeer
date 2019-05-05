@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".home.pepayment.PlanDetailsActivity"
+    tools:ignore="MissingDefaultResource">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srl_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusableInTouchMode="true">
+
+            <xyz.yhsj.loadstatusview.LoadStatusView
+                android:id="@+id/lsv_load_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.yanzhenjie.recyclerview.SwipeRecyclerView
+                    android:id="@+id/rv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingBottom="@dimen/dp_10" />
+            </xyz.yhsj.loadstatusview.LoadStatusView>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal"
+            android:padding="@dimen/dp_20"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_enactment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@mipmap/login_btn_unselect"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="重新制定"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tv_submit_bill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:layout_weight="1"
+                android:background="@drawable/button_yangshi"
+                android:enabled="true"
+                android:gravity="center"
+                android:text="提交账单"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <!--<include layout="@layout/activity_footer_plan_bill" />-->
+    </RelativeLayout>
+
+    <include layout="@layout/top_bar" />
+</FrameLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">cloud-storage</string>
+    <string name="file_name">文件名称：</string>
+    <string name="temporary_file_name">临时文件名称：\n line</string>
+    <string name="file_absolute_path">文件绝对路径：</string>
+    <string name="input_Suffix_name">请输入后缀名</string>
+    <string name="qiniukongjian">七牛空间名：</string>
+    <string name="token">token：</string>
+    <string name="img_info">图片信息：</string>
+    <string name="response_info">\n响应信息：</string>
+    <string name="return_data">\n返回数据：</string>
+</resources>

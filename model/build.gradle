@@ -1,0 +1,54 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+//    compileSdkVersion rootProject.ext.compileSdkVersion
+//    defaultConfig {
+//        minSdkVersion rootProject.ext.minSdkVersion
+//        targetSdkVersion rootProject.ext.targetSdkVersion
+//        versionCode rootProject.ext.versionCode
+//        versionName rootProject.ext.versionName
+//        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    /*hawk*/
+    implementation 'com.orhanobut:hawk:2.0.1'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+//    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    implementation 'jp.wasabeef:glide-transformations:3.0.1'
+    implementation 'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'
+    /*打印log日志库*/
+    implementation 'com.orhanobut:logger:1.15'
+    /*通知*/
+    implementation 'com.hwangjr.rxbus:rxbus:1.0.6'
+    /*adapter*/
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.40'
+
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+
+
+}

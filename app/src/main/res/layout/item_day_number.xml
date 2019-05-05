@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheckBox xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cb_day"
+    android:layout_width="@dimen/dp_30"
+    android:layout_height="@dimen/dp_30"
+    android:layout_margin="@dimen/dp_5"
+    android:background="@drawable/select_date_yangshi"
+    android:button="@null"
+    android:gravity="center"
+    android:textColor="@drawable/bg_selected_text_color"
+    tools:context=".weight.adapter.SelectRepaymentDateAdapter"
+    tools:text="01" />

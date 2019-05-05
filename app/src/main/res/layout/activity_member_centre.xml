@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".find.MemberCentreActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_130"
+                    android:background="@color/colorBlack_2e2e2e" />
+                <!--会员信息-->
+                <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout
+                    android:id="@+id/vip_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_20"
+                    android:padding="@dimen/dp_20"
+                    app:qmui_backgroundColor="@color/colorAccent"
+                    app:qmui_borderColor="@color/colorAccent"
+                    app:qmui_radius="@dimen/dp_5">
+                    <!--头像-->
+                    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+                        android:id="@+id/iv_avatar"
+                        android:layout_width="@dimen/dp_50"
+                        android:layout_height="@dimen/dp_50"
+                        android:background="?selectableItemBackground"
+                        android:src="@mipmap/user_photo_no"
+                        app:qmui_border_color="@color/white"
+                        app:qmui_border_width="@dimen/line_height"
+                        app:qmui_corner_radius="@dimen/dp_35"
+                        app:qmui_is_oval="false" />
+
+                    <!--展示个人信息-->
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:layout_toEndOf="@id/iv_avatar"
+                        android:layout_toRightOf="@id/iv_avatar"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/nickname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tv_nickname"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dp_10"
+                                android:layout_marginRight="@dimen/dp_10"
+                                android:layout_weight="1"
+                                android:maxWidth="@dimen/dp_80"
+                                android:minWidth="@dimen/dp_20"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                tools:text="@string/nickname" />
+
+                            <TextView
+                                android:id="@+id/tv_new_vip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/rectangle_golden_full"
+                                android:paddingLeft="@dimen/dp_15"
+                                android:paddingTop="@dimen/dp_2"
+                                android:paddingRight="@dimen/dp_15"
+                                android:paddingBottom="@dimen/dp_2"
+                                android:text="@string/new_vip"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_20px" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_account_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/nickname"
+                            android:layout_marginTop="@dimen/dp_5"
+                            android:text="@string/text_fragment_mine_account_number"
+                            android:textColor="@color/white" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_avatar"
+                        android:layout_marginTop="@dimen/dp_20">
+
+                        <TextView
+                            android:id="@+id/my_membership_level"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/my_membership_level"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_26px" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/my_membership_level"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/beginLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/novice"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_26px" />
+
+                            <!--<com.qmuiteam.qmui.widget.QMUIProgressBar-->
+                                <!--android:id="@+id/apb_schedule"-->
+                                <!--android:layout_width="0dp"-->
+                                <!--android:layout_height="@dimen/dp_10"-->
+                                <!--android:layout_margin="@dimen/dp_5"-->
+                                <!--android:layout_weight="2"-->
+                                <!--app:qmui_background_color="@color/white"-->
+                                <!--app:qmui_progress_color="@color/color_golden"-->
+                                <!--app:qmui_type="type_rect" />-->
+                            <ProgressBar
+                                android:id="@+id/pb_progress_bar"
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="0dp"
+                                android:layout_height="@dimen/dp_10"
+                                android:layout_margin="@dimen/dp_5"
+                                android:layout_weight="2"
+                                android:progressDrawable="@drawable/layer_progress_drawable_color_golden" />
+
+                            <TextView
+                                android:id="@+id/endLevel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yellow_diamond"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_size_26px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+                    </RelativeLayout>
+                </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/vip_info"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    android:layout_marginRight="@dimen/dp_15" />
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

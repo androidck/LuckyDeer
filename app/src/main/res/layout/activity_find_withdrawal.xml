@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".find.withdraw.FindWithdrawalActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:id="@+id/rl_select_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/tv_card_logo"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_centerVertical="true"
+            tools:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_toEndOf="@id/tv_card_logo"
+            android:layout_toRightOf="@id/tv_card_logo"
+            tools:text="银行名称" />
+
+        <TextView
+            android:id="@+id/tv_bank_tail_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_bank_name"
+            android:layout_marginStart="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@id/tv_card_logo"
+            android:layout_toRightOf="@id/tv_card_logo"
+            android:textColor="@color/color_hint"
+            android:textSize="@dimen/text_size_26px"
+            tools:text="@string/bank_tail_number" />
+
+        <TextView
+            android:id="@+id/tv_bank_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_bank_name"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_toEndOf="@id/tv_bank_tail_number"
+            android:layout_toRightOf="@id/tv_bank_tail_number"
+            android:textColor="@color/color_hint"
+            android:textSize="@dimen/text_size_26px"
+            tools:text="卡类型" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@mipmap/user_open" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_50"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/withdrawal_amount" />
+
+        <EditText
+            android:id="@+id/et_withdrawal_amount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@null"
+            android:drawableStart="@mipmap/money_symbol"
+            android:drawableLeft="@mipmap/money_symbol"
+            android:drawablePadding="@dimen/dp_10"
+            android:inputType="numberDecimal"
+            android:maxLength="12"
+            android:singleLine="true" />
+
+        <View style="@style/style_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_cash_withdrawal_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="@dimen/dp_10"
+                android:paddingBottom="@dimen/dp_10"
+                android:text="@string/cash_withdrawal_amount"
+                android:textColor="@color/color_hint"
+                android:textSize="@dimen/text_size_20px"
+                tools:ignore="RtlSymmetry" />
+
+            <TextView
+                android:id="@+id/tv_full_withdrawal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="?selectableItemBackground"
+                android:padding="@dimen/dp_8"
+                android:text="@string/full_withdrawal"
+                android:textColor="@color/color_80_blue"
+                android:textSize="@dimen/text_size_20px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_determine_withdrawal"
+        style="@style/style_login_btn"
+        android:text="@string/determine_withdrawal" />
+</LinearLayout>

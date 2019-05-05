@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.drawee.view.SimpleDraweeView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:id="@+id/my_image_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    fresco:fadeDuration="300"
+    fresco:actualImageScaleType="focusCrop"
+    fresco:roundingBorderWidth="">
+
+</com.facebook.drawee.view.SimpleDraweeView>
+<!--<com.facebook.drawee.view.SimpleDraweeView-->
+<!--android:id="@+id/my_image_view"-->
+<!--android:layout_width="20dp"-->
+<!--android:layout_height="20dp"-->
+<!--fresco:fadeDuration="300"-->
+<!--fresco:actualImageScaleType="focusCrop"-->
+<!--fresco:placeholderImage="@color/wait_color" 占位符-->
+<!--fresco:placeholderImageScaleType="fitCenter"-->
+<!--fresco:failureImage="@drawable/error" 展示失败图-->
+<!--fresco:failureImageScaleType="centerInside"展示失败图类型-->
+<!--fresco:retryImage="@drawable/retrying"重试图-->
+<!--fresco:retryImageScaleType="centerCrop"重试图类型-->
+<!--fresco:progressBarImage="@drawable/progress_bar"进度条图-->
+<!--fresco:progressBarImageScaleType="centerInside"进度条图类型-->
+<!--fresco:progressBarAutoRotateInterval="1000"进度条旋转间隔时间-->
+<!--fresco:backgroundImage="@color/blue"背景图-->
+<!--fresco:overlayImage="@drawable/watermark"叠加图层-->
+<!--fresco:pressedStateOverlayImage="@color/red"按状态叠加图层-->
+<!--fresco:roundAsCircle="false"设置圆角图-->
+<!--fresco:roundedCornerRadius="1dp"圆角半径-->
+<!--fresco:roundTopLeft="true"圆角方向-->
+<!--fresco:roundTopRight="false"圆角方向-->
+<!--fresco:roundBottomLeft="false"圆角方向-->
+<!--fresco:roundBottomRight="true"圆角方向-->
+<!--fresco:roundWithOverlayColor="@color/corner_color"圆形覆盖颜色-->
+<!--fresco:roundingBorderWidth="2dp"舍入边框高度-->
+<!--fresco:roundingBorderColor="@color/border_color"圆形边框颜色/>-->

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".mine.MoreSettingActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_10">
+
+        <!--账号与安全-->
+        <RelativeLayout
+            android:id="@+id/rl_account_and_security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/dp_10"
+            tools:ignore="UnusedAttribute">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_10"
+                android:text="@string/account_and_security"
+                android:textColor="@color/color_text_gray" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/user_open" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_account_and_security"
+            android:layout_marginTop="@dimen/dp_10">
+            <!--允许下级和上级查看手机号-->
+            <RelativeLayout
+                android:id="@+id/rl_subordinate_show_mobile_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/open_mobile_number"
+                    android:textColor="@color/color_text_gray"
+                    tools:ignore="RtlSymmetry" />
+
+                <Switch
+                    android:id="@+id/s_start_ordering_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/text_size_16px"
+                    android:thumb="@drawable/switch_custom_thumb_selector"
+                    android:track="@drawable/switch_custom_track_selector" />
+            </RelativeLayout>
+            <!--关于我们-->
+            <RelativeLayout
+                android:id="@+id/rl_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_subordinate_show_mobile_phone_number"
+                android:layout_marginTop="@dimen/line_height"
+                android:background="@color/white"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                android:visibility="gone"
+                tools:ignore="UnusedAttribute">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/about_us"
+                    android:textColor="@color/color_text_gray" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/user_open" />
+            </RelativeLayout>
+        </RelativeLayout>
+        <!--清理缓存-->
+        <RelativeLayout
+            android:id="@+id/rl_clean_cache"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/layout"
+            android:layout_marginTop="@dimen/dp_10"
+            android:background="@color/white"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="@dimen/dp_10"
+            tools:ignore="UnusedAttribute">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_10"
+                android:text="@string/clean_cache"
+                android:textColor="@color/color_text_gray" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fixed_line"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_10"
+                    android:layout_marginRight="@dimen/dp_10"
+                    android:textColor="@color/color_text_gray"
+                    tools:text="0.0 M" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/user_open" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_retreat_safely"
+            style="@style/style_login_btn_bg"
+            android:layout_alignParentBottom="true"
+            android:enabled="true"
+            android:text="@string/retreat_safely" />
+    </RelativeLayout>
+
+</LinearLayout>

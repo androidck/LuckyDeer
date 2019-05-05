@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="alpha_05_white">#0DFFFFFF</color>
+    <color name="alpha_60_white">#99FFFFFF</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="alpha_35_black">#59000000</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="base_bg">#ffeeeeee</color>
+    <color name="base_msg_color">#ff999999</color>
+</resources>

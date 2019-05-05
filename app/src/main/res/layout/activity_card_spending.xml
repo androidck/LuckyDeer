@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".home.cardspending.CardSpendingActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:id="@+id/ll_add_card"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_110"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@mipmap/unadd_card_state"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_add_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableTop="@mipmap/add_card_btn"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="@string/add_card"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_36px" />
+    </LinearLayout>
+
+    <include layout="@layout/adapter_select_bank_card" />
+
+    <LinearLayout
+        android:id="@+id/ll_select_aisle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:orientation="vertical"
+        tools:ignore="UnusedAttribute"
+        tools:targetApi="m">
+
+        <TextView
+            android:id="@+id/tv_select_aisle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:drawableEnd="@mipmap/shuaka_zhankai"
+            android:drawableRight="@mipmap/shuaka_zhankai"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_15"
+            android:paddingRight="@dimen/dp_10"
+            android:paddingBottom="@dimen/dp_15"
+            android:text="@string/select_aisle"
+            tools:ignore="UnusedAttribute" />
+
+
+        <include layout="@layout/dialog_item_selset_aisle_details" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dp_10"
+            android:text="@string/amount_consumption" />
+
+        <EditText
+            android:id="@+id/et_amount_consumption_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_10"
+            android:background="@null"
+            android:drawableStart="@mipmap/money_symbol"
+            android:drawableLeft="@mipmap/money_symbol"
+            android:drawablePadding="@dimen/dp_10"
+            android:hint="@string/hint_please_enter_amount_consumption"
+            android:inputType="numberDecimal"
+            android:maxLength="12"
+            android:singleLine="true" />
+
+        <View style="@style/style_line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tv_handling_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:text="@string/handling_fee1"
+                android:textColor="@color/colorGray"
+                android:textSize="@dimen/text_size_24px" />
+
+            <TextView
+                android:id="@+id/tv_limit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:textColor="@color/colorRed"
+                android:textSize="@dimen/text_size_24px"
+                tools:text="@string/limit" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_next"
+        style="@style/style_login_btn"
+        android:text="@string/next"
+        android:visibility="gone" />
+
+</LinearLayout>

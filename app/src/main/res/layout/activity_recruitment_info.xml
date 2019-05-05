@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".mine.salesman.RecruitmentInfoActivity">
+
+    <include layout="@layout/top_bar" />
+    <!--招聘职位-->
+    <LinearLayout
+        android:id="@+id/rl_recruitment_position"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="@string/recruitment_position" />
+
+        <TextView
+            android:id="@+id/tv_recruitment_position"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@mipmap/user_open"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:singleLine="true"
+            tools:text="@string/recruitment_position" />
+    </LinearLayout>
+    <!--招聘要求-->
+    <LinearLayout
+        android:id="@+id/rl_recruitment_requirements"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="@string/recruitment_requirements" />
+
+        <TextView
+            android:id="@+id/tv_recruitment_requirements"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@mipmap/user_open"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:singleLine="true"
+            tools:text="@string/recruitment_requirements" />
+    </LinearLayout>
+    <!--招聘人数-->
+    <LinearLayout
+        android:id="@+id/rl_company_number_people"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="@string/company_number_people" />
+
+        <TextView
+            android:id="@+id/tv_company_number_people"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@mipmap/user_open"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:singleLine="true"
+            tools:text="@string/company_number_people" />
+    </LinearLayout>
+    <!--联系电话-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="@string/contact_number" />
+
+        <EditText
+            android:id="@+id/et_contact_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:hint="请输入联系电话"
+            android:inputType="number"
+            android:maxLength="13"
+            android:singleLine="true" />
+    </LinearLayout>
+    <!--工作地址-->
+    <LinearLayout
+        android:id="@+id/rl_jobs_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:text="@string/jobs_address" />
+
+        <TextView
+            android:id="@+id/tv_jobs_address"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableEnd="@mipmap/user_open"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="right"
+            android:singleLine="true"
+            tools:text="@string/jobs_address" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_release_info"
+        style="@style/style_login_btn"
+        android:enabled="true"
+        android:text="@string/release_info" />
+</LinearLayout>

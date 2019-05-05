@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".weight.PublicDialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@drawable/rectangle_white_full"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_vip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@mipmap/visit_card_vip"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_16px"
+            tools:text="钻石会员" />
+
+        <TextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_55"
+            android:gravity="center"
+            android:padding="@dimen/dp_2"
+            android:textColor="@color/color_text_gray"
+            tools:text="白小白" />
+
+        <TextView
+            android:id="@+id/tv_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nickname"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:padding="@dimen/dp_4"
+            android:textColor="@color/color_text_gray"
+            tools:text="ID：123456789" />
+
+        <RelativeLayout
+            android:id="@+id/rl_leave_comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_account_number"
+            android:visibility="gone">
+
+            <com.lucky.deer.view.ContainsEmojiEditText
+                android:id="@+id/et_leave_comments"
+                style="@style/style_hint_color_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_marginBottom="@dimen/dp_5"
+                android:background="@drawable/rectangle_gray_full_6"
+                android:gravity="left"
+                android:hint="@string/hint_leave_comments"
+                android:maxLines="2"
+                android:minLines="3"
+                android:padding="@dimen/dp_10" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/et_leave_comments"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="@string/dialog_text_remarks"
+                android:textColor="@color/color_hint" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_leave_comments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_leave_comments"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp_15"
+            android:background="@drawable/rectangle_blue_full_6"
+            android:paddingLeft="@dimen/dp_30"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_30"
+            android:paddingBottom="@dimen/dp_10"
+            android:text="@string/leave_comments"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_launcher_round"
+        app:qmui_border_color="@color/white"
+        app:qmui_border_width="@dimen/line_height"
+        app:qmui_corner_radius="@dimen/dp_35"
+        app:qmui_is_oval="false" />
+</RelativeLayout>

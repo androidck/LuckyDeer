@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lucky.deer">
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" /> <!-- 允许程序读取外部存储文件 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 允许程序写入外部存储，如SD卡上写文件 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- 闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" /> <!-- 硬件-相机权 -->
+    <uses-feature android:name="android.hardware.camera" /> <!-- 硬件对焦权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" /> <!-- 录音权限 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- Required -->
+    <!--用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"></uses-permission>
+    <!--用于访问GPS定位-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"></uses-permission>
+    <!--用于获取运营商信息，用于支持提供运营商信息相关的接口-->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <!--用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"></uses-permission>
+
+    <uses-permission android:name="android.permission.BLUETOOTH"></uses-permission>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"></uses-permission>
+    <permission
+        android:name="com.lucky.deer.permission.JPUSH_MESSAGE"
+        android:protectionLevel="signature" /> <!-- Required -->
+    <uses-permission android:name="com.lucky.deer.permission.JPUSH_MESSAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission
+        android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- Optional. Required for location feature -->
+    <!-- 用于开启 debug 版本的应用在 6.0 系统上的层叠窗口权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 8.0两个新权限 -->
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="n">
+
+        <service android:name="com.amap.api.location.APSService" />
+
+      <!--  <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.minmai.wallet.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>-->
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="8c27967a1e032f36a64f5423a527b5c1"></meta-data>
+
+        <!-- 9.0加的，哦哦 -->
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <activity
+            android:name=".find.CheckInActivity"
+            android:label="@string/title_activity_check_in" /> <!-- <activity android:name=".recognition.IDCardActivity"> -->
+        <activity
+            android:name=".startup.StartupPageActivity"
+            android:theme="@style/LauncherTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <intent-filter>
+                <!-- 要想在别的App上能成功调起App，必须添加intent过滤器 -->
+                <!-- 协议部分，随便设置 -->
+                <data
+                    android:host="com.lucky.deer"
+                    android:scheme="app" />
+                <!-- 下面这几行也必须得设置 -->
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".home.MainActivity"
+            android:label="@string/title_activity_main"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.announcement.AnnouncementActivity"
+            android:label="@string/title_activity_announcement"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.LoginActivity"
+            android:label="@string/title_activity_login"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".startup.GuidePageActivity"
+            android:label="@string/title_activity_guide_page_adapter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.RegisteredOneActivity"
+            android:label="@string/title_activity_registered"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.RegisteredTwoActivity"
+            android:label="@string/title_activity_registered"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.RegisteredActivity"
+            android:label="@string/title_activity_registered"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".common.WebViewActivity"
+            android:label="@string/title_activity_web_view"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".login.RetrievePasswordActivity"
+            android:label="@string/title_activity_retrieve_password"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.cardspending.SelectBankCardActivity"
+            android:label="@string/title_activity_select_bank_card"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.cardspending.CardSpendingActivity"
+            android:label="@string/title_activity_card_spending"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.cardspending.CardRaisingKnowledgeActivity"
+            android:label="@string/title_activity_card_raising_knowledge"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.cardspending.SelsetAisleActivity"
+            android:label="@string/title_activity_selset_aisle"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.cardspending.DeterminingReceiptsActivity"
+            android:label="@string/title_activity_determining_receipts"
+            android:screenOrientation="portrait" />
+       <!-- <activity
+            android:name=".recognition.TextRecognitionActivity"
+            android:label="@string/title_activity_perfect_user_info"
+            android:screenOrientation="portrait" />-->
+        <!--
+                  <activity
+                  android:name=".recognition.IDCardActivity"
+                  android:label="@string/title_activity_perfect_user_info" />
+        -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.lucky.deer.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:replace="name,authorities,exported,grantUriPermissions">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="name,resource"/>
+        </provider>
+
+        <activity
+            android:name=".home.cardspending.AddDebitCardActivity"
+            android:label="@string/title_activity_add_debit_card"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:targetApi="cupcake" />
+        <activity
+            android:name=".home.cardspending.AddCreditCardActivity"
+            android:label="@string/title_activity_add_credit_card"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:targetApi="cupcake" />
+        <activity
+            android:name=".mine.MoreSettingActivity"
+            android:label="@string/title_activity_more_setting"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.HelpActivity"
+            android:label="@string/title_activity_help"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.accountManagement.AccountManagementActivity"
+            android:label="@string/title_activity_account_management"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.accountManagement.ModifyLoginPwdActivity"
+            android:label="@string/title_activity_setting_login_pwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.accountManagement.ReplacePhoneNumberActivity"
+            android:label="@string/title_activity_replace_phone_number"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.aboutUs.AboutUsActivity"
+            android:label="@string/title_activity_about_us"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.aboutUs.FeedbackOpinionActivity"
+            android:label="@string/title_activity_feedback"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.SelectOrViewAvatarActivity"
+            android:label="@string/title_activity_select_or_view_avatar"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.accountManagement.SettingWthdrawPwdActivity"
+            android:label="@string/title_activity_setting_wthdraw_pwd"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.supplement.InfoSupplementActivity"
+            android:label="@string/title_activity_info_supplement"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            tools:targetApi="cupcake" />
+        <activity
+            android:name=".mine.message.MessageBoardActivity"
+            android:label="@string/title_activity_message_board"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.TransactionRecordActivity"
+            android:label="@string/title_activity_transaction_record"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.financial.FinancialServicesActivity"
+            android:label="@string/title_activity_financial_services"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.onlineApplication.OnlineApplicationActivity"
+            android:label="我要网申"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.onlineApplication.OnlineLoanActivity"
+            android:label="@string/title_activity_online_loan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.separation.MyDividedOrWithdrawalDetailsActivity"
+            android:label="@string/title_activity_my_separation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.map.CreditCounterActivity"
+            android:label="@string/title_activity_map"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.financial.PublicMenuListActivity"
+            android:label="@string/title_activity_public_menu_list"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.withdraw.FindWithdrawalActivity"
+            android:label="@string/title_activity_find_withdrawal"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.withdraw.ApplyWithdrawalActivity"
+            android:label="@string/title_activity_apply_withdrawal"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.MemberCentreActivity"
+            android:label="@string/title_activity_member_centre"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.withdraw.SubmitFindWithdrawalActivity"
+            android:label="@string/title_activity_find_withdrawal123_adapter"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.video.MyVideoActivity"
+            android:label="@string/title_activity_my_video"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.video.PostVideoActivity"
+            android:label="@string/title_activity_post_video"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.video.VideoActivity"
+            android:label="@string/title_activity_video"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".push.MessageDisplayActivity"
+            android:label="@string/title_activity_message_display"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".find.BusinessDetailsActivity"
+            android:label="@string/title_activity_business_details" />
+        <activity
+            android:name=".mine.message.MessageDetailsActivity"
+            android:label="@string/title_activity_message_details" />
+        <activity
+            android:name=".mine.perfectuserInfo.AuthenticationActivity"
+            android:label="@string/title_activity_authentiction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.perfectuserInfo.BankCardActivity"
+            android:label="@string/title_activity_bankcard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.perfectuserInfo.HeldIdentityActivity"
+            android:label="@string/title_activity_heldident"
+            android:screenOrientation="portrait" /> <!-- 可配置 android:process 参数将 PushService 放在其他进程中 -->
+        <service
+            android:name="cn.jpush.android.service.PushService"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER" />
+                <action android:name="cn.jpush.android.intent.REPORT" />
+                <action android:name="cn.jpush.android.intent.PushService" />
+                <action android:name="cn.jpush.android.intent.PUSH_TIME" />
+            </intent-filter>
+        </service>
+
+        <provider
+            android:name="cn.jpush.android.service.DownloadProvider"
+            android:authorities="com.lucky.deer.DownloadProvider"
+            android:exported="true" /> <!-- Required SDK 核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PushActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@android:style/Theme.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lucky.deer" />
+            </intent-filter>
+        </activity> <!-- SDK 核心功能 -->
+        <activity
+            android:name="cn.jpush.android.ui.PopWinActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:theme="@style/MyDialogStyle">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="com.lucky.deer" />
+            </intent-filter>
+        </activity> <!-- Required SDK 核心功能 -->
+        <service
+            android:name="cn.jpush.android.service.DownloadService"
+            android:enabled="true"
+            android:exported="false" /> <!-- Required SDK 核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver" /> <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+            android:name=".push.MyReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION" /> <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED" /> <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED" /> <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED" /> <!-- Required  用户打开自定义通知栏的intent -->
+                <action android:name="cn.jpush.android.intent.CONNECTION" /> <!-- 接收网络变化 连接/断开 since 1.6.3 -->
+                <category android:name="com.lucky.deer" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" /> <!-- 友盟配置 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5bff4136b465f5288c0002fd" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="@string/app_name" /> <!-- <meta-data -->
+        <!-- android:name="UMENG_CHANNEL" -->
+        <!-- android:value="${UMENG_CHANNEL_VALUE}" /> -->
+        <activity
+            android:name=".home.pepayment.PepaymentPlanActivity"
+            android:label="@string/title_activity_pepayment_plan"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.pepayment.date.DateRepaymentActivity"
+            android:label="@string/title_activity_date_repayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.pepayment.date.MakingPlansActivity"
+            android:label="@string/title_activity_making_plans"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.pepayment.date.PlanDetailsActivity"
+            android:label="@string/title_activity_plan_details"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".home.pepayment.perfect.PerfectRepaymentActivity"
+            android:label="@string/title_activity_perfect_repayment"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.pepayment.perfect.PerfectMakingPlansActivity"
+            android:label="@string/title_activity_perfect_making_plans"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".home.pepayment.perfect.PerfectPlanDetailsActivity"
+            android:label="@string/title_activity_perfect_plan_details"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.salesman.PerfectInfoActivity"
+            android:label="@string/title_activity_perfect_info"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.salesman.CompanySynopsisActivity"
+            android:label="@string/title_activity_company_synopsis"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.salesman.RecruitmentInfoListActivity"
+            android:label="@string/title_activity_recruitment_info"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".mine.salesman.RecruitmentInfoActivity"
+            android:label="@string/title_activity_recruitment_info"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".home.netloan.NetLoanCenterActivity"
+            android:label="@string/title_activity_online_application"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".home.netloan.NetLoanSupermarketActivity"
+            android:label="@string/title_activity_online_loan"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".common.web.BrowserActivity"
+            android:label="@string/title_activity_online_loan"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".home.netloan.NetLoanArticleActivity"
+            android:label="@string/title_activity_online_loan"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".home.cardLife.CardLifeActivity"
+            android:label="@string/title_activity_online_loan"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".home.business.MyBusinessActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".home.cardLife.cardInformation.CardInformationActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".home.pepayment.PlanDetailsActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".home.netloan.NearbyLifeActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".find.business.redEnvelope.RedHandEnvelopesActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan"
+            />
+
+        <activity android:name=".find.business.redEnvelope.RedEnvelopeInfoActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".find.business.redEnvelope.RedEnvelopesDetailActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".find.business.redEnvelope.LocationManagementActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".home.cardLife.ManagementAwardActivity"
+            android:screenOrientation="portrait"
+            />
+
+
+
+    </application>
+
+</manifest>

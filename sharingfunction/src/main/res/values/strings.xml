@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">sharingFunction</string>
+    <string name="we_chat">微信</string>
+    <string name="friends_circle">朋友圈</string>
+    <string name="qq_space">QQ</string>
+    <string name="qq_zone">QQ空间</string>
+    <string name="no_weixin">您还未安装微信客户端</string>
+    <string name="no_qq">您还未安装QQ客户端</string>
+
+
+</resources>

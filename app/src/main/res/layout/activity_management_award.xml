@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".home.cardLife.ManagementAwardActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_business_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center_horizontal"
+            tools:text="商户名称" />
+
+        <TextView
+            android:id="@+id/tv_number_people"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:gravity="center_horizontal"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_size_50px"
+            tools:text="@string/text_management_award_number_people" />
+
+        <TextView
+            android:id="@+id/tv_management_award_introduction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:gravity="center_horizontal"
+            android:text="@string/text_management_award_introduction"
+            android:textColor="@color/color_hint"
+            android:textSize="@dimen/text_size_28px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_apply_immediately"
+        style="@style/style_login_btn"
+        android:enabled="false"
+        android:text="@string/text_management_award_apply_immediately" />
+
+</LinearLayout>

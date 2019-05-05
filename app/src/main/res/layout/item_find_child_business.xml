@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackground"
+    android:padding="@dimen/dp_10"
+    tools:context=".find.business.adapter.BusinessAdapter"
+    tools:ignore="UnusedAttribute">
+
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/qriv_avatar"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/user_photo_no"
+        app:qmui_border_color="@color/white"
+        app:qmui_border_width="@dimen/line_height"
+        app:qmui_corner_radius="@dimen/dp_20"
+        app:qmui_is_oval="false" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_10"
+        android:layout_marginLeft="@dimen/dp_10"
+        android:layout_toEndOf="@id/qriv_avatar"
+        android:layout_toRightOf="@id/qriv_avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_article_title"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_40"
+            android:gravity="center_vertical"
+            tools:text="商机标题" />
+
+        <include layout="@layout/include_item_recycler_content" />
+
+        <com.lucky.deer.find.business.view.NineGridView
+            android:id="@+id/nine_grid_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_4"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/tv_release_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_size_28px"
+            android:textColor="@color/color_80_hint"
+            tools:text="@string/text_business_release_time" />
+    </LinearLayout>
+</RelativeLayout>

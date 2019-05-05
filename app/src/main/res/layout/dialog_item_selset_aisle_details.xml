@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_aisle_info_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="@dimen/dp_10"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:id="@+id/rv_aisle_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/online_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/online_amount" />
+
+        <TextView
+            android:id="@+id/tv_online_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/online_amount"
+            android:layout_toRightOf="@id/online_amount"
+            android:textColor="@color/color_orange"
+            tools:text="@string/online_amount_number" />
+
+        <TextView
+            android:id="@+id/tv_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/color_orange"
+            tools:text="@string/rate" />
+
+        <TextView
+            android:id="@+id/tv_business_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/online_amount"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/business_type"
+            android:textColor="@color/color_hint" />
+
+        <TextView
+            android:id="@+id/tv_single_pen_handling_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/online_amount"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_toEndOf="@id/tv_business_type"
+            android:layout_toRightOf="@id/tv_business_type"
+            android:textColor="@color/color_hint"
+            tools:text="@string/single_pen_handling_fee" />
+
+        <TextView
+            android:id="@+id/tv_swipe_has_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_rate"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_8"
+            android:textColor="@color/color_orange"
+            tools:text="@string/swipe_has_points" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_business_type"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_support_bank_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/support_bank_name"
+                android:textColor="@color/color_hint" />
+
+            <ImageView
+                android:id="@+id/iv_zhankai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/shuaka_zhankai" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rv_aisle_list_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/list_online_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/online_amount" />
+
+        <TextView
+            android:id="@+id/tv_list_online_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/list_online_amount"
+            android:layout_toRightOf="@id/list_online_amount"
+            android:textColor="@color/color_orange"
+            tools:text="@string/online_amount_number" />
+
+        <TextView
+            android:id="@+id/tv_list_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toEndOf="@id/tv_list_online_amount"
+            android:layout_toRightOf="@id/tv_list_online_amount"
+            android:textColor="@color/color_orange"
+            tools:text="@string/rate" />
+
+        <TextView
+            android:id="@+id/tv_list_swipe_has_points"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_5"
+            android:layout_toEndOf="@id/tv_list_rate"
+            android:layout_toRightOf="@id/tv_list_rate"
+            android:textColor="@color/color_orange"
+            tools:text="@string/swipe_has_points" />
+
+        <TextView
+            android:id="@+id/tv_list_business_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_online_amount"
+            android:layout_marginTop="@dimen/dp_8"
+            android:text="@string/business_type"
+            android:textColor="@color/color_hint" />
+
+        <TextView
+            android:id="@+id/tv_list_single_pen_handling_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/list_online_amount"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_toEndOf="@id/tv_list_business_type"
+            android:layout_toRightOf="@id/tv_list_business_type"
+            android:textColor="@color/color_hint"
+            tools:text="@string/single_pen_handling_fee" />
+
+        <CheckBox
+            android:id="@+id/cb_list_selected"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:button="@drawable/bg_selected"
+            android:paddingEnd="@dimen/dp_5"
+            android:paddingRight="@dimen/dp_5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_list_business_type"
+            android:layout_marginTop="@dimen/dp_8"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_list_support_bank_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="@string/support_bank_name"
+                android:textColor="@color/color_hint" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?selectableItemBackground"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/shuaka_zhankai"
+                android:visibility="gone" />
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

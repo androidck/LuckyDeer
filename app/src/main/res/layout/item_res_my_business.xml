@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackground"
+    android:orientation="vertical"
+    tools:context=".home.business.adapter.MyBusinessAdapter"
+    tools:ignore="UnusedAttribute">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10">
+
+        <ImageView
+            android:id="@+id/iv_business_img"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/dp_10"
+            tools:src="@mipmap/find" />
+
+        <TextView
+            android:id="@+id/tv_business_level_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@id/iv_business_img"
+            android:layout_toRightOf="@id/iv_business_img"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            tools:text="商户" />
+
+        <TextView
+            android:id="@+id/tv_business_human_head"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:drawableEnd="@mipmap/find_look"
+            android:drawableRight="@mipmap/find_look"
+            android:drawablePadding="@dimen/dp_10"
+            android:gravity="center"
+            android:textColor="@color/color_80_hint"
+            tools:text="@string/item_adapter_business_level_number_people" />
+
+    </RelativeLayout>
+
+    <View style="@style/style_line" />
+</LinearLayout>

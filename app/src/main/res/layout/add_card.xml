@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?><!--添加银行卡-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_add_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_110"
+    android:gravity="center">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_10"
+        android:background="@mipmap/wireframe">
+
+        <TextView
+            android:id="@+id/tv_add_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@mipmap/choice_card_add"
+            android:drawablePadding="@dimen/dp_10"
+            android:text="@string/add_card"
+            android:textColor="@color/color_text_gray"
+            android:visibility="gone"
+            android:drawableLeft="@mipmap/choice_card_add" />
+
+        <ImageView
+            android:id="@+id/iv_add_card_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/choice_credit_card" />
+    </RelativeLayout>
+
+</RelativeLayout>

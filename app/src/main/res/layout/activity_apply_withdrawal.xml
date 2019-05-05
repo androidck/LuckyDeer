@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".find.withdraw.ApplyWithdrawalActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/color_hint_d8d8d8" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_50"
+        android:src="@mipmap/withdrawal_pic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20"
+        android:text="@string/text_withdrawal_application_waiting_processing"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size_36px" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:text="@string/text_withdrawal_application_time_arrival"
+        android:textColor="@color/color_red_ff4b4b" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_70"
+        android:lineSpacingExtra="@dimen/dp_5"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingRight="@dimen/dp_10"
+        android:text="@string/text_withdrawal_application_time_arrival_content"
+        android:textColor="@color/color_hint" />
+
+    <TextView
+        android:id="@+id/btn_carry_out"
+        style="@style/style_login_btn"
+        android:text="@string/btn_carry_out" />
+
+</LinearLayout>

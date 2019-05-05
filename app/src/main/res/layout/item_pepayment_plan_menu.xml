@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/dp_5"
+    tools:context=".home.pepayment.adapter.PepaymentPlanMenuAdapter">
+
+    <!--<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout-->
+    <!--android:id="@+id/ll_background"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@color/color_default_bank"-->
+    <!--android:gravity="center"-->
+    <!--android:orientation="vertical"-->
+    <!--android:visibility="gone"-->
+    <!--android:padding="@dimen/dp_10"-->
+    <!--app:qmui_backgroundColor="@color/color_default_bank"-->
+    <!--app:qmui_radius="@dimen/dp_5">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_menu_image"-->
+    <!--android:layout_width="@dimen/dp_40"-->
+    <!--android:layout_height="@dimen/dp_40"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--tools:src="@mipmap/share_btn" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_menu_title"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/iv_menu_image"-->
+    <!--android:layout_marginTop="@dimen/dp_5"-->
+    <!--android:textSize="@dimen/text_size_30px"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="菜单标题"-->
+    <!--android:textColor="@color/white" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_menu_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/tv_menu_title"-->
+    <!--android:layout_marginTop="@dimen/dp_5"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:text="菜单内容"-->
+    <!--android:textColor="@color/white"-->
+    <!--android:textSize="@dimen/text_size_26px" />-->
+    <!--</com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>-->
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout
+        android:id="@+id/ll_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_default_bank"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_10"
+        app:qmui_backgroundColor="@color/color_default_bank"
+        app:qmui_radius="@dimen/dp_5">
+
+        <LinearLayout
+            android:id="@+id/layout_menu_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_menu_image"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                tools:src="@mipmap/share_btn" />
+
+            <TextView
+                android:id="@+id/tv_menu_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:text="菜单标题"
+                android:textSize="@dimen/text_size_30px" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_menu_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_10"
+            android:layout_toEndOf="@id/layout_menu_image"
+            android:layout_toRightOf="@id/layout_menu_image"
+            android:text="菜单内容"
+            android:textSize="@dimen/text_size_26px"
+            android:layout_marginStart="@dimen/dp_10" />
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>
+</LinearLayout>

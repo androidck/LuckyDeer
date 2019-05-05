@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical"
+    tools:context=".home.pepayment.date.MakingPlansActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/payment_details_bg" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_80"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/data_payment_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_card_logo"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                tools:src="@mipmap/ic_launcher" />
+
+                            <TextView
+                                android:id="@+id/tv_card_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                tools:text="银行卡名称" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_card_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_5"
+                            tools:text="银行卡号" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_billing_day"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangle_blue_transparent_30"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/billing_day"
+                                    android:textColor="@color/color_80_blue" />
+
+                                <TextView
+                                    android:id="@+id/tv_billing_day"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_80_blue"
+                                    tools:text="@string/billing_day" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_repayment_day"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangle_blue_transparent_30"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/repayment_day"
+                                    android:textColor="@color/color_80_blue" />
+
+                                <TextView
+                                    android:id="@+id/tv_repayment_day"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_80_blue"
+                                    tools:text="@string/repayment_day" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_10"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_full_6"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/repayment_amount" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="￥"
+                            android:textSize="@dimen/text_size_40px"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="0.00"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_size_40px" />
+                    </LinearLayout>
+
+                    <View style="@style/style_line" />
+
+                    <LinearLayout
+                        android:id="@+id/rl_repayment_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:paddingTop="@dimen/dp_15"
+                            android:paddingBottom="@dimen/dp_15"
+                            android:text="@string/repayment_date" />
+
+                        <TextView
+                            android:id="@+id/tv_repayment_number"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:gravity="center"
+                            android:paddingTop="@dimen/dp_15"
+                            android:paddingBottom="@dimen/dp_15"
+                            android:singleLine="true"
+                            tools:text="还款某号" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_progress_bar"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_gravity="center"
+                            android:layout_weight="1.2"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/tv_repayment_date"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.2"
+                            android:drawableEnd="@mipmap/payment_more"
+                            android:drawableRight="@mipmap/payment_more"
+                            android:drawablePadding="@dimen/dp_10"
+                            android:gravity="right"
+                            tools:text="@string/repayment_date" />
+                    </LinearLayout>
+
+                    <View style="@style/style_line" />
+                    <!-- 还款笔数-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:paddingTop="@dimen/dp_15"
+                            android:paddingBottom="@dimen/dp_15"
+                            android:text="@string/daily_repayments" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/btn_reduce"
+                                android:layout_width="@dimen/dp_28"
+                                android:layout_height="@dimen/dp_28"
+                                android:layout_gravity="center"
+                                android:background="@drawable/btn_daily_repayments_pens"
+                                android:enabled="false"
+                                android:text="—"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/tv_number"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="1" />
+
+                            <Button
+                                android:id="@+id/btn_add"
+                                android:layout_width="@dimen/dp_28"
+                                android:layout_height="@dimen/dp_28"
+                                android:layout_gravity="center"
+                                android:background="@drawable/btn_daily_repayments_pens"
+                                android:text="+"
+                                android:textColor="@color/white"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <View
+                        style="@style/style_line"
+                        android:visibility="gone" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注："
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/text_size_26px"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_repayments_number_pens"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/note"
+                            android:layout_toRightOf="@id/note"
+                            android:text="@string/default_remarks_repayments_number_pens"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/text_size_26px"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_amount_not_lower_than"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_repayments_number_pens"
+                            android:layout_toEndOf="@id/note"
+                            android:layout_toRightOf="@id/note"
+                            android:text="@string/default_remarks_amount_not_lower_than"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/text_size_26px"
+                            android:visibility="gone"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_amount_not_lower_than"
+                            android:layout_toEndOf="@id/note"
+                            android:layout_toRightOf="@id/note"
+                            android:text="@string/default_remarks_amount_not_lower_than3"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/text_size_26px"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_10"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:id="@+id/tv_instructions"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_full_6"
+                    android:drawableEnd="@mipmap/payment_more"
+                    android:drawableRight="@mipmap/payment_more"
+                    android:paddingLeft="@dimen/dp_10"
+                    android:paddingTop="@dimen/dp_15"
+                    android:paddingRight="@dimen/dp_10"
+                    android:paddingBottom="@dimen/dp_15"
+                    android:text="@string/instructions"
+                    android:textStyle="bold" />
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_billing"
+                style="@style/style_login_btn"
+                android:enabled="true"
+                android:text="@string/billing" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/top_bar" />
+</FrameLayout>

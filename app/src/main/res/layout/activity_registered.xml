@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/background_color_white"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".login.RegisteredOneActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:padding="@dimen/dp_20"
+        android:src="@mipmap/ic_launcher" />
+
+    <TextView
+        android:id="@+id/tv_show_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="@dimen/dp_30"
+        android:text="@string/get_verification_code0"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/dp_30"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_account_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_account_number"
+                style="@style/style_hint_color_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_10"
+                android:background="@null"
+                android:drawablePadding="@dimen/dp_5"
+                android:hint="@string/hint_please_enter_phone_number"
+                android:inputType="number"
+                android:maxLength="13"
+                android:singleLine="true"
+                tools:text="123" />
+
+            <View style="@style/style_line" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.jyn.vcview.VerificationCodeView
+                android:id="@+id/verificationcodeview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_30"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:vcv_et_bg="@drawable/cb_code"
+                app:vcv_et_cursor="@drawable/et_cursor"
+                app:vcv_et_inputType="number"
+                app:vcv_et_number="4"
+                app:vcv_et_text_color="@android:color/black"
+                app:vcv_et_text_size="@dimen/text_size_16px" />
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackground"
+                android:enabled="false"
+                android:padding="@dimen/dp_20"
+                android:text="@string/get_verification_code"
+                android:textColor="@drawable/button_code_color" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit_registration"
+            style="@style/style_login_btn"
+            android:text="@string/submit_registration" />
+    </LinearLayout>
+</LinearLayout>

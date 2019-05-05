@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:padding="@dimen/dp_10"
+    app:qmui_backgroundColor="@color/white"
+    app:qmui_borderColor="@color/white"
+    app:qmui_radius="@dimen/dp_5"
+    tools:context=".home.announcement.adapter.AnnouncementAdapter">
+
+    <TextView
+        android:id="@+id/tv_release_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="2019-01-22 10:15:20" />
+
+    <TextView
+        android:id="@+id/tv_release_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_release_time"
+        android:layout_marginTop="@dimen/dp_5"
+        android:textColor="@color/color_hint"
+        tools:text="2019-01-22 10:15:20" />
+</com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>

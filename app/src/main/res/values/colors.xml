@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="colorPrimary">#FF454A</color>
+    <color name="colorPrimaryDark">#FF454A</color>
+    <color name="colorAccent">#FF454A</color>
+
+    <color name="colorGreen">#63d32d</color>
+    <!--灰色-->
+    <color name="colorGray">#b1b1b1</color>
+    <color name="color_golden_fafdad">#fafdad</color>
+    <color name="color_gray_e5e5e5">#e5e5e5</color>
+    <!--黑色-->
+    <color name="colorBlack">#323232</color>
+    <color name="colorBlack_2e2e2e">#2e2e2e</color>
+    <color name="colorRed">#ff0000</color>
+    <color name="color_60_Red">#ff7676</color>
+    <color name="color_red_ff4b4b">#ff4b4b</color>
+    <color name="color_blue">#46a5ff</color>
+    <color name="color_80_blue">#2677ff</color>
+    <!--(深灰色)输入框提示提示语颜色、分割线-->
+    <color name="color_hint">#8d8d8d</color>
+    <color name="color_hint_d8d8d8">#d8d8d8</color>
+    <color name="color_80_hint">#CC8d8d8d</color>
+    <color name="color_50_hint">#808d8d8d</color>
+    <!--页面分割线-->
+    <color name="color_layout_line">#f0f0f0</color>
+    <!--列表分割线-->
+    <color name="color_list_line">@color/color_layout_line</color>
+    <!--背景颜色-->
+    <color name="color_background">@color/color_layout_line</color>
+
+    <color name="colorf4f7ff">#f4f7ff</color>
+    <color name="color_orange">#ffa752</color>
+    <color name="color_withdrawal_green">#28b30d</color>
+
+    <color name="color_default_bank">#397ed9</color>
+    <color name="color_golden">#febf05</color>
+    <color name="color_golden_ffc000">#ffc000</color>
+    <color name="color_golden_ffe7a6">#ffe7a6</color>
+    <color name="color_golden_ffb300">#ffb300</color>
+    <color name="color_text_gray">#686d74</color>
+
+    <color name="color_pink_fad2ff">#fad2ff</color>
+    <color name="color_pink_ca58ff">#ca58ff</color>
+    <!--自定义养卡-->
+    <color name="color_menu_custom">@color/color_80_blue</color>
+    <!--日期养卡-->
+    <color name="color_menu_date">#f5cc6d</color>
+    <!--余额养卡-->
+    <color name="color_menu_balance">#9372f6</color>
+    <!--完美养卡-->
+    <color name="color_menu_perfect">#ffb101</color>
+    <!--计划已完成-->
+    <color name="color_green_8dd087">#8dd087</color>
+
+    /**
+    * 待执行 #005eff
+    * 已消费：#19db08
+    * 消费失败：#ff0000
+    */
+    <!--待执行-->
+    <color name="color_blue_005eff">#005eff</color>
+    <!--已消费-->
+    <color name="color_green_19db08">#19db08</color>
+    <!--消费失败-->
+    <color name="color_red_ff0000">#ff0000</color>
+
+    <!-- 新版 -->
+    <color name="color_message">#F5A623</color>
+
+    <!-- 分割线的颜色 -->
+    <color name="colorLines">#F0F0F0</color>
+    <!-- 分割线的颜色 -->
+    <color name="rate_color">#F5A623</color>
+
+    <color name="colorDeep">#8d8d8d</color>
+
+    <color name="colorBg">#ffffff</color>
+
+</resources>

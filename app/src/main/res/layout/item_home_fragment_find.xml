@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical"
+    tools:ignore="UnusedAttribute">
+    <!--文章头部-->
+    <RelativeLayout
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_10"
+             />
+
+        <TextView
+            android:id="@+id/tv_good_card_see_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:drawableEnd="@mipmap/find_look"
+            android:drawableRight="@mipmap/find_look"
+            android:drawablePadding="@dimen/dp_10"
+            android:foreground="?selectableItemBackground"
+            android:paddingTop="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_10"
+            android:text="@string/home_text_see_more"
+            android:textColor="@color/color_80_hint"
+            android:textSize="@dimen/text_size_26px"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:foreground="?selectableItemBackground"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/dp_10"
+            android:layout_marginRight="@dimen/dp_10"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_article_title"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                tools:ignore="NestedWeights"
+                tools:text="文章标题" />
+
+            <TextView
+                android:id="@+id/tv_reading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/home_item_text_reading"
+                android:textSize="@dimen/text_size_26px"
+                tools:textColor="@color/color_80_hint" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_article_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="3"
+            tools:src="@mipmap/withdrawal_pic" />
+    </LinearLayout>
+
+</LinearLayout>

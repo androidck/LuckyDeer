@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/dp_10"
+    android:orientation="vertical"
+    android:background="@color/color_background"
+    tools:context=".mine.supplement.fragment.BankCardFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorf4f7ff"
+            android:gravity="center"
+            android:padding="@dimen/dp_10"
+            android:text="@string/debit_card_front_photo" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_id_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp_10"
+                android:src="@mipmap/bank_card" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/bank_card_name" />
+
+                <TextView
+                    android:id="@+id/tv_bank_card_name"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/not_editable" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/bank_card_number" />
+
+                <EditText
+                    android:id="@+id/et_bank_card_number"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="@string/hint_editable"
+                    android:inputType="number"
+                    android:maxLength="25" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_account_opening_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/account_opening_area" />
+
+                <TextView
+                    android:id="@+id/tv_select_account_opening_area"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:singleLine="true"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:hint="@string/account_opening_area" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20" />
+
+            <LinearLayout
+                android:id="@+id/ll_select_bank"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/select_bank" />
+
+                <TextView
+                    android:id="@+id/tv_select_bank"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:layout_weight="2"
+                    android:hint="@string/select_bank" />
+            </LinearLayout>
+
+            <View
+                style="@style/style_line"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:padding="@dimen/dp_10"
+                    android:text="@string/reserve_phone_number" />
+
+                <EditText
+                    android:id="@+id/et_reserve_phone_number"
+                    style="@style/style_hint_color_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:background="@null"
+                    android:hint="@string/bank_reserve_phone_number"
+                    android:inputType="number"
+                    android:maxLength="12" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_submit_review"
+            style="@style/style_login_btn"
+            android:text="@string/submit_review" />
+    </LinearLayout>
+</ScrollView>

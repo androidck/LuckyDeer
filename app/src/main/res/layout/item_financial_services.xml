@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".home.adapter.FinancialServicesAdapter">
+
+    <View
+        android:id="@+id/v_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_10"
+        android:background="@color/color_background" />
+
+    <TextView
+        android:id="@+id/tv_service_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_5"
+        android:paddingBottom="@dimen/dp_5"
+        android:text="@string/title_activity_financial_services"
+        android:textColor="@color/colorBlack"
+        tools:ignore="RtlSymmetry" />
+
+    <LinearLayout
+        android:id="@+id/ll_function"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackground"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_function_one"
+                android:layout_width="@dimen/dp_50"
+                android:layout_height="@dimen/dp_50"
+                android:padding="@dimen/dp_5"
+                tools:src="@mipmap/get_money" />
+
+            <TextView
+                android:id="@+id/tv_function_one"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/dp_5"
+                android:gravity="center"
+                android:padding="@dimen/dp_5"
+                android:textColor="@color/colorBlack"
+                tools:text="功能一" />
+        </LinearLayout>
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_function_one"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="?selectableItemBackground"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_function_one"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--tools:src="@mipmap/get_money" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_function_one"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:drawablePadding="@dimen/dp_5"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--tools:text="功能一" />-->
+        <!--</LinearLayout>-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_function_two"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="?selectableItemBackground"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_function_two"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--tools:src="@mipmap/get_money" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_function_two"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:drawablePadding="@dimen/dp_5"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--tools:text="功能二" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_function_three"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:background="?selectableItemBackground"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_function_three"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--tools:src="@mipmap/get_money" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_function_three"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:drawablePadding="@dimen/dp_5"-->
+        <!--android:gravity="center"-->
+        <!--android:padding="@dimen/dp_5"-->
+        <!--android:textColor="@color/colorBlack"-->
+        <!--tools:text="功能三" />-->
+        <!--</LinearLayout>-->
+    </LinearLayout>
+</LinearLayout>

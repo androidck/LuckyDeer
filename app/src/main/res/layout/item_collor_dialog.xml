@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tv_text"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_40"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackgroundBorderless"
+    android:gravity="center_vertical"
+    android:textColor="@color/color_hint"
+    android:paddingLeft="@dimen/dp_15"
+    android:textSize="@dimen/text_size_28px"
+    tools:context="common.adapter.CollorDialogAdapter"
+    tools:ignore="UnusedAttribute"
+    tools:text="不限" />
+

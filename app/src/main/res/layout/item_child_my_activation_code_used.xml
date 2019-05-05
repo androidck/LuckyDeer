@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackgroundBorderless"
+    android:gravity="center_vertical"
+    android:padding="@dimen/dp_10"
+    tools:context=".home.business.adapter.MyActivationCodeChildAdapter"
+    tools:ignore="UnusedAttribute">
+
+
+    <!--头像-->
+    <com.qmuiteam.qmui.widget.QMUIRadiusImageView
+        android:id="@+id/btn_avatar"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:src="@mipmap/user_photo_no"
+        app:qmui_border_color="@color/white"
+        app:qmui_border_width="@dimen/line_height"
+        app:qmui_corner_radius="@dimen/dp_35"
+        app:qmui_is_oval="false" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/dp_10">
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:textColor="@color/color_hint"
+            android:textSize="@dimen/text_size_26px"
+            tools:ignore="UnusedAttribute"
+            tools:text="2019/03/27" />
+
+        <TextView
+            android:id="@+id/tv_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_10"
+            android:foreground="?selectableItemBackgroundBorderless"
+            tools:ignore="UnusedAttribute"
+            tools:text="使用人" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btn_phone_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@mipmap/phone"
+        android:drawableLeft="@mipmap/phone"
+        android:drawablePadding="@dimen/dp_10"
+        android:foreground="?selectableItemBackgroundBorderless"
+        android:gravity="center_vertical"
+        android:padding="@dimen/dp_10"
+        android:textColor="@color/color_hint"
+        tools:ignore="UnusedAttribute"
+        tools:text="18212345678" />
+</LinearLayout>

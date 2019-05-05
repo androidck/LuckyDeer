@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".find.SubmitFindWithdrawalActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <!-- 修改前 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/ll_withdraw_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_50"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_15"
+            android:visibility="invisible">
+
+            <View style="@style/style_line" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/withdrawal_amount"
+                    android:textColor="@color/color_hint" />
+
+                <TextView
+                    android:id="@+id/tv_withdrawal_amount"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/color_hint"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="￥5000.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/handling_fee"
+                    android:textColor="@color/color_hint" />
+
+                <TextView
+                    android:id="@+id/tv_handling_fee"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/color_hint"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="￥0.50" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrival_bank_card"
+                    android:textColor="@color/color_hint" />
+
+                <TextView
+                    android:id="@+id/tv_arrival_bank_card"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:textColor="@color/color_hint"
+                    tools:ignore="RtlHardcoded"
+                    tools:text="@string/bank_tail_number" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/style_green_btn"
+            android:visibility="invisible"
+            android:enabled="true"
+            android:text="@string/carry_out" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/dp_10"
+        android:background="@android:color/white"
+        >
+        <ImageView
+            android:layout_width="@dimen/dp_150"
+            android:layout_height="@dimen/dp_100"
+            android:src="@mipmap/withdrawal_pic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/dp_50"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="提现申请成功，等待处理..."
+            android:textSize="@dimen/text_size_30px"
+            android:textColor="#323232"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/dp_30"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="到账时间说明："
+            android:textColor="#ff4b4b"
+            android:layout_marginTop="@dimen/dp_40"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:textSize="@dimen/text_size_24px"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="工作日下午16:00之前申请的提现会在当天18:00左右到账，16:00后申请的提现将会在下个工作日到账。周末及法定节假日提现，将在下个工作日到账"
+            android:textColor="#8d8d8d"
+            android:layout_marginTop="@dimen/dp_5"
+            android:layout_marginLeft="@dimen/dp_30"
+            android:layout_marginRight="@dimen/dp_30"
+            android:lineSpacingExtra="10dp"
+            android:lineSpacingMultiplier="1"
+            android:textSize="@dimen/text_size_24px"
+            />
+
+        <TextView
+            android:id="@+id/tv_commit"
+            style="@style/style_login_btn"
+            android:text="@string/carry_out" />
+    </LinearLayout>
+</LinearLayout>

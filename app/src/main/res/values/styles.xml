@@ -1,0 +1,113 @@
+<resources>
+
+    <style name="AppTheme" parent="QMUI.Compat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="qmui_topbar_height">@dimen/dp_45</item>
+    </style>
+
+    <!-- 解决启动页白屏的问题 -->
+    <style name="LauncherTheme" parent="AppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+
+    <style name="background_color_white">
+        <item name="android:background">@android:color/white</item>
+    </style>
+
+    <style name="style_login_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+        <item name="android:layout_marginRight">@dimen/dp_50</item>
+        <item name="android:layout_marginLeft">@dimen/dp_50</item>
+        <item name="android:layout_marginBottom">@dimen/dp_20</item>
+        <item name="android:background">@drawable/button_yangshi</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_36px</item>
+    </style>
+
+    <style name="style_login_btn_bg">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/dp_40</item>
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+        <item name="android:layout_marginRight">@dimen/dp_50</item>
+        <item name="android:layout_marginLeft">@dimen/dp_50</item>
+        <item name="android:layout_marginBottom">@dimen/dp_20</item>
+        <item name="android:background">@drawable/btn_bg_share</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_36px</item>
+    </style>
+
+    <style name="style_green_btn">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/dp_30</item>
+        <item name="android:layout_marginRight">@dimen/dp_50</item>
+        <item name="android:layout_marginLeft">@dimen/dp_50</item>
+        <item name="android:layout_marginBottom">@dimen/dp_20</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:background">@drawable/button_green_yangshi</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_size_36px</item>
+    </style>
+
+    <style name="style_hint_color_size">
+        <item name="android:textSize">@dimen/text_size_32px</item>
+        <item name="android:textColorHint">@color/color_hint</item>
+    </style>
+
+    <style name="style_line">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/line_height</item>
+        <item name="android:background">@color/color_list_line</item>
+    </style>
+
+    <style name="style_RadioButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:button">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:textColor">@drawable/rb_focu_color</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <!-- 自定义仿IOS的ActionSheet底部Dialog的样式 ，有模糊效果 -->
+    <style name="ActionSheetDialogStyle" parent="@android:style/Theme.Dialog">
+        <!-- 背景透明 -->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <!-- 浮于Activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- Dialog以外的区域模糊效果 -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 无标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- Dialog进入及退出动画 -->
+        <item name="android:windowAnimationStyle">@style/ActionSheetDialogAnimation</item>
+    </style>
+    <!-- ActionSheet进出动画 -->
+    <style name="ActionSheetDialogAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/actionsheet_dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/actionsheet_dialog_out</item>
+    </style>
+
+    <style name="MyCustomTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">true</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">@dimen/text_size_36px</item>
+    </style>
+
+</resources>

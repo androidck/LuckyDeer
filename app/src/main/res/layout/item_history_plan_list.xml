@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/dp_10"
+    app:qmui_backgroundColor="@color/white"
+    app:qmui_borderColor="@color/white"
+    app:qmui_radius="@dimen/dp_5"
+    tools:context=".home.pepayment.date.adapter.HistoryPlanListAdapter">
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout
+        android:id="@+id/qrrl_plan_abnormal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:qmui_backgroundColor="@color/color_60_Red"
+        app:qmui_borderColor="@color/white"
+        app:qmui_radiusTopLeft="@dimen/dp_5"
+        app:qmui_radiusTopRight="@dimen/dp_5">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawablePadding="@dimen/dp_10"
+            android:paddingStart="@dimen/dp_10"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:textColor="@color/white"
+            tools:ignore="RtlSymmetry" />
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/qrrl_plan_abnormal"
+        android:padding="@dimen/dp_10">
+
+        <RelativeLayout
+            android:id="@+id/card_base_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/iv_bank_logo"
+                android:layout_width="@dimen/dp_30"
+                android:layout_height="@dimen/dp_30"
+                android:layout_marginBottom="@dimen/dp_10"
+                android:src="@mipmap/share_btn" />
+
+            <TextView
+                android:id="@+id/tv_bank_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toEndOf="@id/iv_bank_logo"
+                android:layout_toRightOf="@id/iv_bank_logo"
+                android:singleLine="true"
+                tools:text="银行名称" />
+
+            <TextView
+                android:id="@+id/tv_tail_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toEndOf="@id/tv_bank_name"
+                android:layout_toRightOf="@id/tv_bank_name"
+                android:gravity="center"
+                android:singleLine="true"
+                tools:text="@string/tail_number" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_execution_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_gray_d8_full"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:singleLine="true"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20px"
+                    tools:text="@string/completed" />
+
+                <TextView
+                    android:id="@+id/tv_restart_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_10"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:background="@drawable/rectangle_orange_full"
+                    android:gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:singleLine="true"
+                    android:text="@string/restart_plan"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_20px"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/line"
+            style="@style/style_line"
+            android:layout_below="@id/card_base_info" />
+
+        <TextView
+            android:id="@+id/tv_date_submission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_marginTop="@dimen/dp_10"
+            android:singleLine="true"
+            android:text="@string/date_submission" />
+
+        <TextView
+            android:id="@+id/tv_repayment_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:singleLine="true"
+            android:text="@string/repayment_type"
+            tools:ignore="HardcodedText" />
+
+        <LinearLayout
+            android:id="@+id/data"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_date_submission"
+            android:layout_marginTop="@dimen/dp_10"
+            android:orientation="horizontal">
+            <!--还款笔数-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/repayments" />
+
+                <TextView
+                    android:id="@+id/tv_repayments"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:singleLine="true"
+                    tools:text="10" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/line_height"
+                android:layout_height="match_parent"
+                android:background="@color/color_list_line" />
+            <!--实际消费金额-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/amount_consumption" />
+
+                <TextView
+                    android:id="@+id/tv_amount_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:singleLine="true"
+                    tools:text="￥600" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="@dimen/line_height"
+                android:layout_height="match_parent"
+                android:background="@color/color_list_line" />
+            <!--计划还款金额-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="@string/planned_amount" />
+
+                <TextView
+                    android:id="@+id/tv_planned_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:singleLine="true"
+                    tools:text="￥6000" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</com.qmuiteam.qmui.widget.roundwidget.QMUIRoundRelativeLayout>

@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_10"
+    android:layout_marginRight="@dimen/dp_10"
+    app:cardBackgroundColor="@color/color_golden_ffc000"
+    app:cardCornerRadius="@dimen/dp_5"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    >
+
+    <com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:qmui_backgroundColor="@color/white"
+        app:qmui_borderColor="@color/base_bg"
+        app:qmui_radius="@dimen/dp_5">
+        <!--第一天消费-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_first_day_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/spending_bills"
+                    android:drawableRight="@mipmap/spending_bills"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/text_perfect_plan_details_consumer_bill" />
+            </LinearLayout>
+            <!--上午消费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_first_day_morning_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_first_day_morning_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_first_day_morning_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+            <!--下午消费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_first_day_afternoon_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_first_day_afternoon_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_first_day_afternoon_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/style_line" />
+        <!--第二天消费-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_next_day_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/spending_bills"
+                    android:drawableRight="@mipmap/spending_bills"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/text_perfect_plan_details_consumer_bill" />
+            </LinearLayout>
+            <!--上午消费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_next_day_morning_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_next_day_morning_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_next_day_morning_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+            <!--下午消费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_next_day_afternoon_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_next_day_afternoon_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_next_day_afternoon_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/style_line" />
+        <!--第三天消费-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_third_day_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/spending_bills"
+                    android:drawableRight="@mipmap/spending_bills"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/text_perfect_plan_details_consumer_bill" />
+            </LinearLayout>
+            <!--上午消费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_third_day_morning_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_third_day_morning_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_third_day_morning_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+            <!--下午消费-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_third_day_afternoon_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_third_day_afternoon_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:id="@+id/tv_third_day_afternoon_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <View style="@style/style_line" />
+        <!--第四天养卡-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_10">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fourth_day_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_date" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@mipmap/reimbursement_bills"
+                    android:drawableRight="@mipmap/reimbursement_bills"
+                    android:drawablePadding="@dimen/dp_10"
+                    android:text="@string/text_perfect_plan_details_repayment_bill"
+                    android:textColor="@color/color_golden_ffc000" />
+            </LinearLayout>
+            <!--养卡-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_fourth_day_repayment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.4"
+                    tools:text="11:12" />
+
+                <TextView
+                    android:id="@+id/tv_fourth_day_repayment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    tools:text="@string/text_perfect_plan_details_repayment" />
+
+                <TextView
+                    android:id="@+id/tv_fourth_day_repayment_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:gravity="end"
+                    android:textColor="@color/color_80_blue"
+                    tools:text="执行状态" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.qmuiteam.qmui.widget.roundwidget.QMUIRoundLinearLayout>
+</android.support.v7.widget.CardView>
+

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    tools:context=".home.pepayment.perfect.PerfectMakingPlansActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@mipmap/payment_details_bg" />
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_150"
+                    android:layout_marginLeft="@dimen/dp_10"
+                    android:layout_marginTop="@dimen/dp_80"
+                    android:layout_marginRight="@dimen/dp_10"
+                    app:cardCornerRadius="@dimen/dp_5"
+                    app:cardPreventCornerOverlap="true"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@mipmap/data_payment_bg"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_10">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/iv_card_logo"
+                                android:layout_width="@dimen/dp_30"
+                                android:layout_height="@dimen/dp_30"
+                                tools:src="@mipmap/ic_launcher" />
+
+                            <TextView
+                                android:id="@+id/tv_card_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_10"
+                                android:layout_marginLeft="@dimen/dp_10"
+                                tools:text="银行卡名称" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_card_number"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_5"
+                            tools:text="银行卡号" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangle_blue_transparent_30"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_perfect_billing_day"
+                                    android:textColor="@color/color_80_blue" />
+
+                                <TextView
+                                    android:id="@+id/tv_billing_day"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_80_blue"
+                                    tools:text="@string/text_perfect_billing_day" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.2" />
+
+                            <LinearLayout
+                                android:id="@+id/ll_repayment_day"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="@drawable/rectangle_blue_transparent_30"
+                                android:gravity="center"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/dp_5">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/text_perfect_repayment_day"
+                                    android:textColor="@color/color_80_blue" />
+
+                                <TextView
+                                    android:id="@+id/tv_repayment_day"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/color_80_blue"
+                                    tools:text="@string/text_perfect_repayment_day" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </RelativeLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_marginRight="@dimen/dp_10"
+                app:cardCornerRadius="@dimen/dp_6"
+                app:cardPreventCornerOverlap="true"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rectangle_white_full_6"
+                    android:orientation="vertical"
+                    android:padding="@dimen/dp_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/text_perfect_repayment_amount" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="￥"
+                            android:textSize="@dimen/text_size_40px"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/et_money"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:hint="0.00"
+                            android:inputType="number"
+                            android:maxLength="7"
+                            android:maxLines="1"
+                            android:textSize="@dimen/text_size_40px" />
+                    </LinearLayout>
+
+                    <View style="@style/style_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/dp_15"
+                            android:paddingBottom="@dimen/dp_15"
+                            android:text="@string/text_perfect_reserved_amount"
+                            android:textColor="@color/color_hint" />
+
+                        <TextView
+                            android:id="@+id/tv_reserved_amount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_10"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:paddingTop="@dimen/dp_15"
+                            android:paddingBottom="@dimen/dp_15"
+                            android:singleLine="true"
+                            android:textColor="@color/colorBlack"
+                            tools:text="3000" />
+                    </LinearLayout>
+
+                    <View style="@style/style_line" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/note"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="注："
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/text_size_26px"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_repayments_number_pens"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/note"
+                            android:layout_toRightOf="@id/note"
+                            android:text="@string/text_perfect_remarks"
+                            android:textColor="@color/colorRed"
+                            android:textSize="@dimen/text_size_26px"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/tv_billing"
+                style="@style/style_login_btn"
+                android:enabled="true"
+                android:text="@string/billing" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/top_bar" />
+</FrameLayout>

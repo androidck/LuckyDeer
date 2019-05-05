@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:foreground="?selectableItemBackground"
+    tools:context=".mine.adapter.HelpAdapter"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/tv_help_function_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableEnd="@mipmap/find_look"
+        android:drawableRight="@mipmap/find_look"
+        android:paddingLeft="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_15"
+        android:paddingRight="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_15"
+        tools:text="帮助功能" />
+</LinearLayout>

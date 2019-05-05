@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_background"
+    tools:context=".mine.PerfectUserInfoActivity">
+
+    <include layout="@layout/top_bar" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/line_height"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_10">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/perfect_user_info_top_style_one"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/authentication"
+            android:textColor="@color/colorBlack" />
+
+        <CheckBox
+            android:id="@+id/cb_held_identity_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/perfect_user_info_top_style_two"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/held_identity_card"
+            android:textColor="@color/colorBlack" />
+
+        <CheckBox
+            android:id="@+id/cb_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableTop="@drawable/perfect_user_info_top_style_three"
+            android:enabled="false"
+            android:gravity="center"
+            android:text="@string/bank_card"
+            android:textColor="@color/colorBlack" />
+    </LinearLayout>
+
+    <com.lucky.deer.view.NonSwipeableViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</LinearLayout>
